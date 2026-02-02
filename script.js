@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoContainer = document.getElementById('video-container');
     const videoOverlay = document.getElementById('video-overlay');
     const mainContent = document.getElementById('main-content');
+    const header = document.getElementById('header');
 
     // Video event listeners
     video.addEventListener('ended', function() {
@@ -34,13 +35,56 @@ document.addEventListener('DOMContentLoaded', function() {
         videoOverlay.classList.remove('hidden');
         videoOverlay.classList.add('show');
     });
+
+    // Initialize sidebar toggle
+    initializeSidebar();
 });
+
+// Sidebar functionality
+function initializeSidebar() {
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', function() {
+            toggleSidebar();
+        });
+    }
+
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', function() {
+            closeSidebar();
+        });
+    }
+}
+
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+    sidebar.classList.toggle('active');
+    sidebarToggle.classList.toggle('active');
+    sidebarOverlay.classList.toggle('active');
+}
+
+function closeSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+    sidebar.classList.remove('active');
+    sidebarToggle.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+}
 
 // Function to scroll to a specific section
 function scrollToSection(sectionId) {
     // Hide video container and show main content
     const videoContainer = document.getElementById('video-container');
     const mainContent = document.getElementById('main-content');
+    const header = document.getElementById('header');
     
     videoContainer.classList.add('fade-out');
     
@@ -48,6 +92,12 @@ function scrollToSection(sectionId) {
         videoContainer.style.display = 'none';
         mainContent.classList.remove('hidden');
         mainContent.classList.add('show');
+        
+        // Show header when main content is displayed
+        if (header) {
+            header.classList.remove('hidden');
+            header.classList.add('show');
+        }
         
         // Scroll to the requested section
         const section = document.getElementById(sectionId);
@@ -62,6 +112,7 @@ function showMainContent() {
     const videoContainer = document.getElementById('video-container');
     const mainContent = document.getElementById('main-content');
     const videoOverlay = document.getElementById('video-overlay');
+    const header = document.getElementById('header');
     
     videoContainer.classList.add('fade-out');
     videoOverlay.classList.remove('hidden');
@@ -71,6 +122,12 @@ function showMainContent() {
         videoContainer.style.display = 'none';
         mainContent.classList.remove('hidden');
         mainContent.classList.add('show');
+        
+        // Show header when main content is displayed
+        if (header) {
+            header.classList.remove('hidden');
+            header.classList.add('show');
+        }
     }, 1000);
 }
 

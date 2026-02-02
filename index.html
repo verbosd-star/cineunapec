@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header/Navbar -->
+    <header id="header" class="header hidden">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="img/logos.png" alt="Festival de Cine UNAPEC" class="navbar-logo">
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-logo">
+                    <img src="img/logos.png" alt="Festival de Cine UNAPEC">
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#tema-general" class="sidebar-link" onclick="closeSidebar()">Tema General</a>
+                    <a href="#objetivo" class="sidebar-link" onclick="closeSidebar()">Objetivo</a>
+                    <a href="#participantes" class="sidebar-link" onclick="closeSidebar()">Participantes</a>
+                    <a href="#categorias" class="sidebar-link" onclick="closeSidebar()">Categorías</a>
+                    <a href="#premios" class="sidebar-link" onclick="closeSidebar()">Premios</a>
+                    <a href="#requisitos" class="sidebar-link" onclick="closeSidebar()">Requisitos</a>
+                    <a href="#inscripcion" class="sidebar-link" onclick="closeSidebar()">Inscripción</a>
+                    <a href="#proyecciones" class="sidebar-link" onclick="closeSidebar()">Proyecciones</a>
+                    <a href="#jurado" class="sidebar-link" onclick="closeSidebar()">Jurado</a>
+                </nav>
+            </div>
+        </aside>
+    </header>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebar-overlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+
     <!-- Video Intro Section -->
     <div id="video-container" class="video-container">
         <video id="intro-video" autoplay muted playsinline>
