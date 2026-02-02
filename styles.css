@@ -1,0 +1,691 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #19203d;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Video Container */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container.fade-out {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+#intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(25, 32, 61, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.video-overlay.hidden {
+    display: none;
+}
+
+.video-overlay.show {
+    display: flex;
+    animation: fadeIn 1s ease-in;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    animation: slideDown 1s ease-out;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 1.5rem;
+    animation: slideUp 1s ease-out 0.3s backwards;
+}
+
+/* Buttons */
+.btn {
+    background-color: #c8962b;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(200, 150, 43, 0.4);
+}
+
+.btn:hover {
+    background-color: #d4a435;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(200, 150, 43, 0.6);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #c8962b;
+    color: #c8962b;
+}
+
+.btn-secondary:hover {
+    background-color: #c8962b;
+    color: #ffffff;
+}
+
+.btn-large {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+/* Main Content */
+.main-content {
+    position: relative;
+    z-index: 1;
+}
+
+.main-content.hidden {
+    display: none;
+}
+
+.main-content.show {
+    display: block;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+    min-height: auto;
+}
+
+.section-alt {
+    background-color: #232b4d;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #c8962b;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content {
+    font-size: 1.1rem;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Objectives List */
+.objectives-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.objectives-list li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(200, 150, 43, 0.1);
+    border-left: 4px solid #c8962b;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.objectives-list li:hover {
+    background-color: rgba(200, 150, 43, 0.2);
+    transform: translateX(10px);
+}
+
+/* Participants Grid */
+.participants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.participant-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.participant-card:hover {
+    background: rgba(200, 150, 43, 0.1);
+    border-color: #c8962b;
+    transform: translateY(-5px);
+}
+
+.participant-card h3 {
+    color: #c8962b;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Categories Grid */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.category-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.category-item:hover {
+    background: rgba(200, 150, 43, 0.1);
+    border-color: #c8962b;
+    transform: scale(1.05);
+}
+
+.category-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.category-item h3 {
+    color: #c8962b;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.category-item p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Awards */
+.awards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.award-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(200, 150, 43, 0.3);
+}
+
+.award-card:hover {
+    background: rgba(200, 150, 43, 0.1);
+    border-color: #c8962b;
+    transform: translateY(-5px);
+}
+
+.award-card.featured {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(200, 150, 43, 0.2), rgba(200, 150, 43, 0.05));
+    border-color: #c8962b;
+}
+
+.award-card h3 {
+    color: #c8962b;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.award-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.awards-note {
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* Requirements */
+.requirements-list {
+    margin-top: 2rem;
+}
+
+.requirement-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.requirement-item:hover {
+    background: rgba(200, 150, 43, 0.1);
+    transform: translateX(10px);
+}
+
+.req-number {
+    background-color: #c8962b;
+    color: #19203d;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+}
+
+.req-content h4 {
+    color: #c8962b;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Submission Info */
+.submission-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid rgba(200, 150, 43, 0.3);
+}
+
+.info-box.full-width {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.info-box h3 {
+    color: #c8962b;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.info-box ul,
+.info-box ol {
+    text-align: left;
+    padding-left: 1.5rem;
+}
+
+.info-box li {
+    margin-bottom: 0.8rem;
+}
+
+.info-box strong {
+    color: #c8962b;
+}
+
+/* Event Schedule */
+.event-schedule {
+    margin-top: 2rem;
+}
+
+.day-schedule {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 2px solid rgba(200, 150, 43, 0.3);
+}
+
+.day-schedule.featured {
+    background: linear-gradient(135deg, rgba(200, 150, 43, 0.2), rgba(200, 150, 43, 0.05));
+    border-color: #c8962b;
+}
+
+.day-schedule h3 {
+    color: #c8962b;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #c8962b;
+    padding-bottom: 0.5rem;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.schedule-item .time {
+    background-color: #c8962b;
+    color: #19203d;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.event-details h4 {
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.event-details p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.event-note {
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* Jury */
+.jury-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #c8962b;
+}
+
+.jury-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.jury-member {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.jury-member:hover {
+    background: rgba(200, 150, 43, 0.1);
+    border-color: #c8962b;
+    transform: translateY(-5px);
+}
+
+.jury-photo {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #c8962b, #d4a435);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.jury-member h3 {
+    color: #c8962b;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.jury-title {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.jury-bio {
+    color: #aaa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Jury Criteria */
+.jury-criteria {
+    margin-top: 4rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid rgba(200, 150, 43, 0.3);
+}
+
+.jury-criteria h3 {
+    color: #c8962b;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.criteria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.criteria-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(200, 150, 43, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #c8962b;
+}
+
+.criteria-item strong {
+    color: #ffffff;
+}
+
+.criteria-item span {
+    background-color: #c8962b;
+    color: #19203d;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+/* Footer */
+.footer {
+    background-color: #0d1020;
+    padding: 3rem 0 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: #c8962b;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(200, 150, 43, 0.3);
+    padding-top: 1rem;
+    text-align: center;
+    color: #aaa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .award-card.featured {
+        grid-column: span 1;
+    }
+
+    .participants-grid,
+    .categories-grid,
+    .awards-container,
+    .jury-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-item {
+        flex-direction: column;
+    }
+
+    .schedule-item .time {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}

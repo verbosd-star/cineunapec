@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival de Cine UNAPEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Video Intro Section -->
+    <div id="video-container" class="video-container">
+        <video id="intro-video" autoplay muted playsinline>
+            <source src="video/introunapec.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div id="video-overlay" class="video-overlay hidden">
+            <h1 class="main-title">Festival de Cine UNAPEC</h1>
+            <div class="buttons-container" id="buttons-container">
+                <button class="btn" onclick="scrollToSection('tema-general')">Explorar</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('inscripcion')">Inscríbete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content hidden">
+        <!-- Tema General -->
+        <section id="tema-general" class="section">
+            <div class="container">
+                <h2 class="section-title">Tema General</h2>
+                <div class="content">
+                    <p>El Festival de Cine UNAPEC es un evento anual que celebra la creatividad y el talento cinematográfico de nuestra comunidad universitaria. Este año, nuestro tema se centra en "Narrativas del Futuro", explorando cómo el cine puede imaginar y dar forma a nuestro mañana.</p>
+                    <p>Invitamos a estudiantes, profesores y cineastas independientes a compartir sus visiones únicas a través del séptimo arte.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objetivo del Festival -->
+        <section id="objetivo" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Objetivo del Festival</h2>
+                <div class="content">
+                    <ul class="objectives-list">
+                        <li>Promover la producción audiovisual estudiantil de calidad</li>
+                        <li>Fomentar el intercambio cultural y artístico entre la comunidad UNAPEC</li>
+                        <li>Crear un espacio de exhibición para nuevos talentos cinematográficos</li>
+                        <li>Estimular el pensamiento crítico y la creatividad a través del cine</li>
+                        <li>Fortalecer la industria audiovisual dominicana desde la academia</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Participantes -->
+        <section id="participantes" class="section">
+            <div class="container">
+                <h2 class="section-title">Participantes</h2>
+                <div class="content">
+                    <div class="participants-grid">
+                        <div class="participant-card">
+                            <h3>Estudiantes UNAPEC</h3>
+                            <p>Estudiantes activos de pregrado y postgrado de todas las carreras.</p>
+                        </div>
+                        <div class="participant-card">
+                            <h3>Egresados</h3>
+                            <p>Graduados UNAPEC de los últimos 3 años.</p>
+                        </div>
+                        <div class="participant-card">
+                            <h3>Profesores</h3>
+                            <p>Personal docente de la universidad.</p>
+                        </div>
+                        <div class="participant-card">
+                            <h3>Cineastas Invitados</h3>
+                            <p>Realizadores independientes por invitación especial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías -->
+        <section id="categorias" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Categorías</h2>
+                <div class="content">
+                    <div class="categories-grid">
+                        <div class="category-item">
+                            <span class="category-icon">🎬</span>
+                            <h3>Cortometraje de Ficción</h3>
+                            <p>Duración máxima: 20 minutos</p>
+                        </div>
+                        <div class="category-item">
+                            <span class="category-icon">📹</span>
+                            <h3>Documental</h3>
+                            <p>Duración máxima: 30 minutos</p>
+                        </div>
+                        <div class="category-item">
+                            <span class="category-icon">✨</span>
+                            <h3>Animación</h3>
+                            <p>Duración máxima: 10 minutos</p>
+                        </div>
+                        <div class="category-item">
+                            <span class="category-icon">🎭</span>
+                            <h3>Experimental</h3>
+                            <p>Duración máxima: 15 minutos</p>
+                        </div>
+                        <div class="category-item">
+                            <span class="category-icon">📱</span>
+                            <h3>Videoarte</h3>
+                            <p>Duración máxima: 8 minutos</p>
+                        </div>
+                        <div class="category-item">
+                            <span class="category-icon">🎥</span>
+                            <h3>Videoclip Musical</h3>
+                            <p>Duración máxima: 6 minutos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premios y Reconocimientos -->
+        <section id="premios" class="section">
+            <div class="container">
+                <h2 class="section-title">Premios y Reconocimientos</h2>
+                <div class="content">
+                    <div class="awards-container">
+                        <div class="award-card featured">
+                            <h3>🏆 Gran Premio del Festival</h3>
+                            <p class="award-amount">RD$50,000</p>
+                            <p>Mejor obra del festival</p>
+                        </div>
+                        <div class="award-card">
+                            <h3>🥇 Mejor Dirección</h3>
+                            <p class="award-amount">RD$15,000</p>
+                        </div>
+                        <div class="award-card">
+                            <h3>🥈 Mejor Fotografía</h3>
+                            <p class="award-amount">RD$10,000</p>
+                        </div>
+                        <div class="award-card">
+                            <h3>🥉 Mejor Guión</h3>
+                            <p class="award-amount">RD$10,000</p>
+                        </div>
+                        <div class="award-card">
+                            <h3>🎭 Mejor Actuación</h3>
+                            <p class="award-amount">RD$8,000</p>
+                        </div>
+                        <div class="award-card">
+                            <h3>🎵 Mejor Sonido</h3>
+                            <p class="award-amount">RD$8,000</p>
+                        </div>
+                        <div class="award-card">
+                            <h3>✂️ Mejor Edición</h3>
+                            <p class="award-amount">RD$8,000</p>
+                        </div>
+                        <div class="award-card">
+                            <h3>⭐ Premio del Público</h3>
+                            <p class="award-amount">RD$5,000</p>
+                        </div>
+                    </div>
+                    <p class="awards-note">Todos los ganadores recibirán además un certificado de reconocimiento y material promocional.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requisitos Generales -->
+        <section id="requisitos" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Requisitos Generales</h2>
+                <div class="content">
+                    <div class="requirements-list">
+                        <div class="requirement-item">
+                            <span class="req-number">1</span>
+                            <div class="req-content">
+                                <h4>Producción Original</h4>
+                                <p>Las obras deben ser producciones originales realizadas en los últimos 2 años.</p>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="req-number">2</span>
+                            <div class="req-content">
+                                <h4>Formato Técnico</h4>
+                                <p>Formato digital en alta definición (mínimo 1080p). Formatos aceptados: MP4, MOV, AVI.</p>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="req-number">3</span>
+                            <div class="req-content">
+                                <h4>Idioma</h4>
+                                <p>Obras en cualquier idioma deben incluir subtítulos en español.</p>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="req-number">4</span>
+                            <div class="req-content">
+                                <h4>Derechos</h4>
+                                <p>El participante debe poseer todos los derechos de la obra (música, imágenes, etc.).</p>
+                            </div>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="req-number">5</span>
+                            <div class="req-content">
+                                <h4>Contenido</h4>
+                                <p>Las obras no deben contener contenido discriminatorio, ofensivo o que viole derechos de terceros.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inscripción y envío de obras -->
+        <section id="inscripcion" class="section">
+            <div class="container">
+                <h2 class="section-title">Inscripción y Envío de Obras</h2>
+                <div class="content">
+                    <div class="submission-info">
+                        <div class="info-box">
+                            <h3>📅 Fechas Importantes</h3>
+                            <ul>
+                                <li><strong>Apertura de convocatoria:</strong> 1 de marzo, 2026</li>
+                                <li><strong>Cierre de convocatoria:</strong> 30 de abril, 2026</li>
+                                <li><strong>Notificación de seleccionados:</strong> 15 de mayo, 2026</li>
+                                <li><strong>Festival:</strong> 1-3 de junio, 2026</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h3>📋 Proceso de Inscripción</h3>
+                            <ol>
+                                <li>Completar el formulario de inscripción en línea</li>
+                                <li>Subir la obra en la plataforma designada</li>
+                                <li>Incluir ficha técnica y sinopsis (máx. 150 palabras)</li>
+                                <li>Adjuntar fotos promocionales (mín. 3, alta resolución)</li>
+                                <li>Pagar cuota de inscripción: RD$500</li>
+                            </ol>
+                        </div>
+                        <div class="info-box full-width">
+                            <h3>🔗 Envío de Material</h3>
+                            <p>Las obras deben ser enviadas a través de nuestra plataforma en línea o mediante enlace de descarga (Google Drive, Dropbox, WeTransfer).</p>
+                            <p><strong>Contacto:</strong> festivalcine@unapec.edu.do | Tel: (809) 555-1234</p>
+                            <button class="btn btn-large">Inscríbete Ahora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyecciones y ceremonia final -->
+        <section id="proyecciones" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Proyecciones y Ceremonia Final</h2>
+                <div class="content">
+                    <div class="event-schedule">
+                        <div class="day-schedule">
+                            <h3>Día 1 - Viernes 1 de Junio</h3>
+                            <div class="schedule-item">
+                                <span class="time">6:00 PM</span>
+                                <div class="event-details">
+                                    <h4>Ceremonia de Apertura</h4>
+                                    <p>Auditorio Principal UNAPEC</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time">7:00 PM</span>
+                                <div class="event-details">
+                                    <h4>Proyección: Cortometrajes de Ficción (Bloque 1)</h4>
+                                    <p>Sala 1</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time">7:00 PM</span>
+                                <div class="event-details">
+                                    <h4>Proyección: Documentales (Bloque 1)</h4>
+                                    <p>Sala 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-schedule">
+                            <h3>Día 2 - Sábado 2 de Junio</h3>
+                            <div class="schedule-item">
+                                <span class="time">2:00 PM</span>
+                                <div class="event-details">
+                                    <h4>Proyección: Animación y Experimental</h4>
+                                    <p>Sala 1</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time">4:00 PM</span>
+                                <div class="event-details">
+                                    <h4>Panel: El Futuro del Cine Digital</h4>
+                                    <p>Sala de Conferencias</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time">6:00 PM</span>
+                                <div class="event-details">
+                                    <h4>Proyección: Videoarte y Videoclips</h4>
+                                    <p>Sala 1</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="day-schedule featured">
+                            <h3>Día 3 - Domingo 3 de Junio</h3>
+                            <div class="schedule-item">
+                                <span class="time">5:00 PM</span>
+                                <div class="event-details">
+                                    <h4>Proyección de Obras Finalistas</h4>
+                                    <p>Auditorio Principal</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="time">7:30 PM</span>
+                                <div class="event-details">
+                                    <h4>🏆 Ceremonia de Premiación y Clausura</h4>
+                                    <p>Auditorio Principal - Alfombra Roja</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="event-note">Todas las proyecciones son gratuitas y abiertas al público. Cupos limitados.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jurado -->
+        <section id="jurado" class="section">
+            <div class="container">
+                <h2 class="section-title">Jurado</h2>
+                <div class="content">
+                    <p class="jury-intro">Nuestro distinguido jurado está compuesto por profesionales destacados de la industria audiovisual nacional e internacional:</p>
+                    <div class="jury-grid">
+                        <div class="jury-member">
+                            <div class="jury-photo">👨‍🎬</div>
+                            <h3>Dr. Carlos Méndez</h3>
+                            <p class="jury-title">Director y Productor</p>
+                            <p class="jury-bio">Ganador de múltiples premios internacionales, con más de 20 años de experiencia en cine latinoamericano.</p>
+                        </div>
+                        <div class="jury-member">
+                            <div class="jury-photo">👩‍🎬</div>
+                            <h3>Lic. María Rodríguez</h3>
+                            <p class="jury-title">Directora de Fotografía</p>
+                            <p class="jury-bio">Reconocida cinematógrafo con trabajos en festivales como Sundance y Toronto.</p>
+                        </div>
+                        <div class="jury-member">
+                            <div class="jury-photo">👨‍💼</div>
+                            <h3>Prof. Juan Santana</h3>
+                            <p class="jury-title">Crítico de Cine y Académico</p>
+                            <p class="jury-bio">Docente universitario y autor de diversos libros sobre teoría cinematográfica.</p>
+                        </div>
+                        <div class="jury-member">
+                            <div class="jury-photo">👩‍💼</div>
+                            <h3>Lic. Ana Pérez</h3>
+                            <p class="jury-title">Editora y Postproductora</p>
+                            <p class="jury-bio">Especialista en montaje con trabajos premiados en el Festival de Cine de La Habana.</p>
+                        </div>
+                        <div class="jury-member">
+                            <div class="jury-photo">👨‍🎨</div>
+                            <h3>Mtro. Roberto Díaz</h3>
+                            <p class="jury-title">Diseñador de Sonido</p>
+                            <p class="jury-bio">Ingeniero de sonido con créditos en más de 50 producciones cinematográficas.</p>
+                        </div>
+                    </div>
+                    <div class="jury-criteria">
+                        <h3>Criterios de Evaluación</h3>
+                        <div class="criteria-grid">
+                            <div class="criteria-item">
+                                <strong>Narrativa y Guión</strong>
+                                <span>25%</span>
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Dirección y Puesta en Escena</strong>
+                                <span>20%</span>
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Fotografía y Diseño Visual</strong>
+                                <span>20%</span>
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Edición y Ritmo</strong>
+                                <span>15%</span>
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Sonido y Música</strong>
+                                <span>10%</span>
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Originalidad e Innovación</strong>
+                                <span>10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Festival de Cine UNAPEC</h3>
+                        <p>Celebrando la creatividad audiovisual estudiantil</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contacto</h4>
+                        <p>festivalcine@unapec.edu.do</p>
+                        <p>Tel: (809) 555-1234</p>
+                        <p>UNAPEC, Santo Domingo, República Dominicana</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Síguenos</h4>
+                        <p>@festivalcineunapec</p>
+                        <p>Facebook | Instagram | Twitter</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Festival de Cine UNAPEC. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
