@@ -1,6 +1,6 @@
 /* CSS Variables */
 :root {
-    --title-color: var(--title-color);
+    --title-color: #c8962b;
     --body-color: #ffffff;
     --background-color: #19203d;
 }
@@ -60,7 +60,7 @@ html {
 }
 
 .navbar-logo {
-    height: 50px;
+    height: 60px;
     width: auto;
     cursor: pointer;
 }
@@ -130,9 +130,9 @@ html {
 }
 
 .sidebar-logo img {
-    max-width: 120%;
+    max-width: 100%;
     height: auto;
-    transform: scale(1.2);
+    transform: scale(1.0);
 }
 
 .sidebar-nav {
@@ -837,6 +837,56 @@ p, li, label, caption, span {
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-weight: 700;
+}
+
+/* Jurado Section */
+.jury-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jury-member {
+    text-align: center;
+}
+
+.jury-photo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #c8962b;
+    background-color: rgba(200, 150, 43, 0.1);
+}
+
+.jury-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.jury-placeholder {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    background: linear-gradient(135deg, #19203d 0%, #232b4d 100%);
+}
+
+.jury-name {
+    color: var(--title-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
 }
 
 /* Footer */
