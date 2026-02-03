@@ -159,11 +159,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
+            
             if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                e.preventDefault();
+                
+                // Close sidebar if the link is inside it
+                const sidebar = document.getElementById('sidebar');
+                if (sidebar && sidebar.contains(this)) {
+                    closeSidebar();
+                }
+                
+                // Use setTimeout to ensure sidebar closes first
+                setTimeout(function() {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
             }
         });
     });
