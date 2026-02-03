@@ -1,3 +1,10 @@
+/* CSS Variables */
+:root {
+    --title-color: var(--title-color);
+    --body-color: #ffffff;
+    --background-color: #19203d;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -7,8 +14,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #19203d;
-    color: #ffffff;
+    background-color: var(--background-color);
+    color: var(--body-color);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -123,8 +130,9 @@ html {
 }
 
 .sidebar-logo img {
-    max-width: 100%;
+    max-width: 120%;
     height: auto;
+    transform: scale(1.2);
 }
 
 .sidebar-nav {
@@ -269,7 +277,7 @@ html {
 .btn-secondary {
     background-color: transparent;
     border: 2px solid #c8962b;
-    color: #c8962b;
+    color: var(--title-color);
 }
 
 .btn-secondary:hover {
@@ -315,11 +323,67 @@ html {
     background-color: #232b4d;
 }
 
+/* Hero Section */
+.hero-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--title-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.theme-highlight {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--title-color);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    color: var(--title-color);
+    margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .section-title {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: #c8962b;
+    color: var(--title-color);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -327,11 +391,63 @@ html {
 
 .content {
     font-size: 1.1rem;
+    color: var(--body-color);
 }
 
 .content p {
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    color: var(--body-color);
+}
+
+.content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.content ul li {
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+}
+
+/* Global heading styles */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+}
+
+/* Global text styles */
+p, li, label, caption, span {
+    color: var(--body-color);
+}
+
+/* Awards List */
+.awards-list {
+    list-style: none;
+    padding-left: 0;
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+.awards-list li {
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
+    background-color: rgba(200, 150, 43, 0.1);
+    border-left: 4px solid #c8962b;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: var(--body-color);
+}
+
+.awards-list li:hover {
+    background-color: rgba(200, 150, 43, 0.2);
+    transform: translateX(10px);
+}
+
+.awards-note {
+    text-align: center;
+    font-style: italic;
+    margin-top: 2rem;
+    color: var(--body-color);
 }
 
 /* Objectives List */
@@ -347,6 +463,7 @@ html {
     border-left: 4px solid #c8962b;
     border-radius: 5px;
     transition: all 0.3s ease;
+    color: var(--body-color);
 }
 
 .objectives-list li:hover {
@@ -378,7 +495,7 @@ html {
 }
 
 .participant-card h3 {
-    color: #c8962b;
+    color: var(--title-color);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -413,7 +530,7 @@ html {
 }
 
 .category-item h3 {
-    color: #c8962b;
+    color: var(--title-color);
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
 }
@@ -453,7 +570,7 @@ html {
 }
 
 .award-card h3 {
-    color: #c8962b;
+    color: var(--title-color);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -508,7 +625,7 @@ html {
 }
 
 .req-content h4 {
-    color: #c8962b;
+    color: var(--title-color);
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
@@ -534,7 +651,7 @@ html {
 }
 
 .info-box h3 {
-    color: #c8962b;
+    color: var(--title-color);
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
 }
@@ -550,7 +667,7 @@ html {
 }
 
 .info-box strong {
-    color: #c8962b;
+    color: var(--title-color);
 }
 
 /* Event Schedule */
@@ -572,7 +689,7 @@ html {
 }
 
 .day-schedule h3 {
-    color: #c8962b;
+    color: var(--title-color);
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
     border-bottom: 2px solid #c8962b;
@@ -622,7 +739,7 @@ html {
     text-align: center;
     font-size: 1.2rem;
     margin-bottom: 3rem;
-    color: #c8962b;
+    color: var(--title-color);
 }
 
 .jury-grid {
@@ -660,7 +777,7 @@ html {
 }
 
 .jury-member h3 {
-    color: #c8962b;
+    color: var(--title-color);
     margin-bottom: 0.5rem;
     font-size: 1.4rem;
 }
@@ -688,7 +805,7 @@ html {
 }
 
 .jury-criteria h3 {
-    color: #c8962b;
+    color: var(--title-color);
     text-align: center;
     margin-bottom: 2rem;
     font-size: 1.8rem;
@@ -738,7 +855,7 @@ html {
 
 .footer-section h3,
 .footer-section h4 {
-    color: #c8962b;
+    color: var(--title-color);
     margin-bottom: 1rem;
 }
 
