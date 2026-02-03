@@ -110,7 +110,7 @@ html {
     background: linear-gradient(135deg, #19203d 0%, #232b4d 100%);
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
     transition: right 0.3s ease;
-    z-index: 1000;
+    z-index: 1001;
     overflow-y: auto;
 }
 
@@ -180,6 +180,7 @@ html {
 .sidebar-overlay.active {
     opacity: 1;
     visibility: visible;
+    width: calc(100% - 350px);
 }
 
 /* Video Container */
