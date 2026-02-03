@@ -936,7 +936,7 @@ p, li, label, caption, span {
 }
 
 .footer-main-logo {
-    max-width: 300px;
+    max-width: 450px;
     height: auto;
 }
 
@@ -959,7 +959,7 @@ p, li, label, caption, span {
 }
 
 .footer-logo {
-    max-width: 200px;
+    max-width: 300px;
     height: auto;
     margin-bottom: 1rem;
 }
