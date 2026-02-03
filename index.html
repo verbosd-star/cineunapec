@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLUFEST 2026 - Festival Latino de Cortometrajes UNAPEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header id="header" class="header hidden">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="img/logos.png" alt="CLUFEST 2026" class="navbar-logo">
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-logo">
+                    <img src="img/logos.png" alt="CLUFEST 2026">
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#hero" class="sidebar-link">Convocatoria Oficial</a>
+                    <a href="#tema-general" class="sidebar-link">Tema General</a>
+                    <a href="#objetivo" class="sidebar-link">Objetivo del Festival</a>
+                    <a href="#participantes" class="sidebar-link">Participantes</a>
+                    <a href="#categorias" class="sidebar-link">Categorías</a>
+                    <a href="#premios" class="sidebar-link">Premios y Reconocimientos</a>
+                    <a href="#requisitos" class="sidebar-link">Requisitos Generales</a>
+                    <a href="#inscripcion" class="sidebar-link">Inscripción y Envío de Obras</a>
+                    <a href="#proyecciones" class="sidebar-link">Proyecciones y Ceremonia Final</a>
+                    <a href="#jurado" class="sidebar-link">Jurado</a>
+                </nav>
+            </div>
+        </aside>
+    </header>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebar-overlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+    <!-- Video Intro Section -->
+    <div id="video-container" class="video-container">
+        <button id="skip-intro-btn" class="skip-intro-btn">Saltar Intro</button>
+        <video id="intro-video" autoplay muted playsinline>
+            <source src="video/introunapec.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div id="video-overlay" class="video-overlay hidden">
+            <div class="main-title">
+                <img src="img/logos.png" alt="CLUFEST 2026 - Festival Latino de Cortometrajes UNAPEC" class="main-logo">
+            </div>
+            <div class="buttons-container" id="buttons-container">
+                <button class="btn" onclick="scrollToSection('hero')">Explorar</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('inscripcion')">Inscríbete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content hidden">
+        <!-- Hero Section -->
+        <section id="hero" class="section hero-section">
+            <div class="container">
+                <p><h1 class="hero-title">Convocatoria Oficial</h1></p>
+                <h2 class="hero-subtitle">Festival Latino de Cortometrajes<br>UNAPEC – CLUFEST 2026</h2>
+                <div class="content hero-content">
+                    <p>La Universidad APEC (UNAPEC), a través de su Decanato de Artes y Comunicación invita a toda la comunidad estudiantil universitaria de América Latina, así como a las universidades del país con licenciaturas en cine, escuelas, centros e institutos de cinematografía, a participar en el Primer Festival del Corto Latino UNAPEC – CLUFEST 2026, bajo el lema <strong>"Cine con Alma Latina"</strong>.</p>
+                    <p>Este festival se celebrará del <strong>15 al 17 de abril de 2026</strong>, y busca ser un espacio de encuentro, creatividad y diálogo audiovisual que celebra la diversidad cultural y el talento emergente de los jóvenes creadores.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tema General -->
+        <section id="tema-general" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Tema General</h2>
+                <div class="content">
+                    <p class="theme-highlight"><strong>"Miradas Latinoamericanas: identidad, transformación y futuro"</strong></p>
+                    <p>Los cortometrajes deberán abordar, desde cualquier género o enfoque, las realidades, sueños y desafíos que configuran las identidades latinoamericanas contemporáneas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objetivo del Festival -->
+        <section id="objetivo" class="section">
+            <div class="container">
+                <h2 class="section-title">Objetivo del Festival</h2>
+                <div class="content">
+                    <p>Fomentar la producción audiovisual universitaria como medio de expresión artística, reflexión social y desarrollo cultural en la región latinoamericana.</p>
+                    <p><strong>CLUFEST es el único festival en el país dedicado exclusivamente a cortometrajes latinos.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Participantes -->
+        <section id="participantes" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Participantes</h2>
+                <div class="content">
+                    <p>Podrán participar estudiantes universitarios activos de instituciones de educación superior de República Dominicana y universidades miembro de la Federación Latinoamericana de Facultades de Comunicación Social (FELEFACS), de forma individual o en equipos de hasta cinco integrantes. También se aceptarán propuestas de estudiantes de centros e institutos técnicos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías -->
+        <section id="categorias" class="section">
+            <div class="container">
+                <h2 class="section-title">Categorías</h2>
+                <div class="content">
+                    <div class="categories-grid">
+                        <div class="category-item">
+                            <span class="category-icon">🎬</span>
+                            <h3>Ficción</h3>
+                        </div>
+                        <div class="category-item">
+                            <span class="category-icon">📹</span>
+                            <h3>Documental</h3>
+                        </div>
+                        <div class="category-item">
+                            <span class="category-icon">✨</span>
+                            <h3>Animación y Experimental</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premios y Reconocimientos -->
+        <section id="premios" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Premios y Reconocimientos</h2>
+                <div class="content">
+                    <p>Se otorgarán trofeos y certificados en las siguientes categorías:</p>
+                    <ul class="awards-list">
+                        <li>Premio Absoluto al Mejor Cortometraje</li>
+                        <li>Mejor Dirección</li>
+                        <li>Mejor Dirección de Fotografía</li>
+                        <li>Mejor Diseño de Producción</li>
+                        <li>Mejor Mezcla de Sonido y Musicalización</li>
+                        <li>Mejor Guion</li>
+                        <li>Mejor Edición</li>
+                        <li>Mejor Cartel de Cine</li>
+                        <li>Mejor Corto Documental</li>
+                        <li>Mejor Corto Internacional</li>
+                        <li>Mejor Animación o Cortometraje Experimental</li>
+                        <li>Premio del Público al Corto más Popular</li>
+                    </ul>
+                    <p class="awards-note">Los cortos ganadores serán proyectados en la Muestra Itinerante UNAPEC 2026 y difundidos a través de plataformas asociadas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requisitos Generales -->
+        <section id="requisitos" class="section">
+            <div class="container">
+                <h2 class="section-title">Requisitos Generales</h2>
+                <div class="content">
+                    <h3>Duración:</h3>
+                    <ul>
+                        <li><strong>Cortometraje:</strong> 1 minuto a 20 minutos.</li>
+                        <li><strong>Animación:</strong> 1 minuto en adelante.</li>
+                    </ul>
+                    <p><strong>Idioma:</strong> español o con subtítulos en español.</p>
+                    <p><strong>Formato de entrega:</strong> archivo digital en formato MP4, resolución mínima Full HD (1920x1080).</p>
+                    <p><strong>Cada participante podrá presentar hasta dos cortometrajes.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inscripción y envío de obras -->
+        <section id="inscripcion" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Inscripción y Envío de Obras</h2>
+                <div class="content">
+                    <p>Las inscripciones estarán abiertas hasta el <strong>28 de febrero de 2026</strong>.</p>
+                    <p>El participante debe enviar su cortometraje al correo: <strong>clufest@adm.unapec.edu.do</strong></p>
+                    <p><strong>Asunto del correo:</strong> PARTICIPACIÓN CLUFEST</p>
+                    <h3>En el correo debe incluir:</h3>
+                    <ul>
+                        <li>Nombre(s) de todos los participantes</li>
+                        <li>Ficha técnica del cortometraje</li>
+                    </ul>
+                    <p class="note">Es importante colocar correctamente el asunto y la información solicitada para validar la participación.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyecciones y ceremonia final -->
+        <section id="proyecciones" class="section">
+            <div class="container">
+                <h2 class="section-title">Proyecciones y Ceremonia Final</h2>
+                <div class="content">
+                    <p>Las proyecciones finales y la ceremonia de premiación se realizarán los días <strong>15 y 17 de abril de 2026</strong>, en el <strong>Auditorio Dr. Leonel Rodríguez Rib</strong>, campus principal de UNAPEC, Santo Domingo, República Dominicana.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jurado -->
+        <section id="jurado" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Jurado</h2>
+                <div class="content">
+                    <div class="jury-grid">
+                        <div class="jury-member">
+                            <div class="jury-photo">
+                                <img src="img/Danilo_Reynoso.jpeg" alt="Danilo Reynoso" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="jury-placeholder">👨‍🎬</div>
+                            </div>
+                            <h3 class="jury-name">Danilo Reynoso</h3>
+                        </div>
+                        <div class="jury-member">
+                            <div class="jury-photo">
+                                <img src="img/Elías_Muñoz.jpeg" alt="Elías Muñoz" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="jury-placeholder">👩‍🎬</div>
+                            </div>
+                            <h3 class="jury-name">Elías Muñoz</h3>
+                        </div>
+                        <div class="jury-member">
+                            <div class="jury-photo">
+                                <img src="img/Taina_Rodriguez.jpeg" alt="Taina Rodríguez" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="jury-placeholder">👨‍💼</div>
+                            </div>
+                            <h3 class="jury-name">Taina Rodríguez</h3>
+                        </div>
+                        <div class="jury-member">
+                            <div class="jury-photo">
+                                <img src="img/jurado4.jpg" alt="Dahiana Acosta" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="jury-placeholder">👩‍💼</div>
+                            </div>
+                            <h3 class="jury-name">Dahiana Acosta</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section section-alt cta-section">
+            <div class="container">
+                <div class="content text-center">
+                    <h2 class="cta-title">Participa, no te quedes fuera.</h2>
+                    <h3 class="cta-subtitle">¡Celebra el cine con alma latina!</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-logos">
+                    <img src="img/logo_footer.png" alt="CLUFEST 2026" class="footer-main-logo">
+                </div>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <img src="img/logos.png" alt="CLUFEST 2026 - Festival Latino de Cortometrajes UNAPEC" class="footer-logo">
+                        <p>Primer Festival del Corto Latino UNAPEC</p>
+                        <p>"Cine con Alma Latina"</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contacto</h4>
+                        <p>clufest@adm.unapec.edu.do</p>
+                        <p>UNAPEC, Santo Domingo, República Dominicana</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Fechas Importantes</h4>
+                        <p>Inscripciones: 28 feb 2026</p>
+                        <p>Festival: 15-17 abril 2026</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 CLUFEST - Festival Latino de Cortometrajes UNAPEC. Todos los derechos reservados.</p>
+                    <p class="footer-credit">Esta web fue creada por Verbo Taller</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
