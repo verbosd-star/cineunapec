@@ -5,6 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoOverlay = document.getElementById('video-overlay');
     const mainContent = document.getElementById('main-content');
     const header = document.getElementById('header');
+    const skipIntroBtn = document.getElementById('skip-intro-btn');
+
+    // Skip intro button functionality
+    if (skipIntroBtn) {
+        skipIntroBtn.addEventListener('click', function() {
+            // Skip to end of video
+            video.currentTime = video.duration - 0.1;
+            // Hide the button
+            skipIntroBtn.classList.add('hidden');
+        });
+    }
 
     // Video event listeners
     video.addEventListener('ended', function() {
@@ -12,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
         video.pause();
         videoOverlay.classList.remove('hidden');
         videoOverlay.classList.add('show');
+        // Hide skip button when video ends
+        if (skipIntroBtn) {
+            skipIntroBtn.classList.add('hidden');
+        }
     });
 
     // Handle video errors
@@ -19,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Video error:', e);
         // If video fails to load, show overlay immediately
         showMainContent();
+        // Hide skip button on error
+        if (skipIntroBtn) {
+            skipIntroBtn.classList.add('hidden');
+        }
     });
 
     // Optional: Skip video on click (for testing or user preference)
@@ -34,6 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show overlay if autoplay is blocked
         videoOverlay.classList.remove('hidden');
         videoOverlay.classList.add('show');
+        // Hide skip button if autoplay is blocked
+        if (skipIntroBtn) {
+            skipIntroBtn.classList.add('hidden');
+        }
     });
 
     // Initialize sidebar toggle

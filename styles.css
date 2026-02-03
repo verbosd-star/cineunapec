@@ -206,6 +206,36 @@ html {
     object-fit: cover;
 }
 
+.skip-intro-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1001;
+    background-color: rgba(200, 150, 43, 0.9);
+    color: #19203d;
+    border: 2px solid #c8962b;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skip-intro-btn:hover {
+    background-color: #c8962b;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(200, 150, 43, 0.4);
+}
+
+.skip-intro-btn.hidden {
+    display: none;
+}
+
 .video-overlay {
     position: absolute;
     top: 0;
