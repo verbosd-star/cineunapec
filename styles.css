@@ -856,8 +856,8 @@ p, li, label, caption, span {
 
 .jury-photo {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin: 0 auto 1rem;
     border-radius: 50%;
     overflow: hidden;
@@ -896,6 +896,18 @@ p, li, label, caption, span {
     margin-top: 3rem;
 }
 
+.footer-logos {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(200, 150, 43, 0.3);
+}
+
+.footer-main-logo {
+    max-width: 300px;
+    height: auto;
+}
+
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -925,6 +937,12 @@ p, li, label, caption, span {
     padding-top: 1rem;
     text-align: center;
     color: #aaa;
+}
+
+.footer-credit {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #888;
 }
 
 /* Animations */
