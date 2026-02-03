@@ -326,7 +326,9 @@ html {
 /* Hero Section */
 .hero-section {
     padding: 4rem 0;
+    padding-top: 6rem;
     text-align: center;
+    scroll-margin-top: 100px;
 }
 
 .hero-title {
