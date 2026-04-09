@@ -922,6 +922,65 @@ p, li, label, caption, span {
     margin-top: 0.5rem;
 }
 
+/* Dean's Speech */
+.dean-speech {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 3rem;
+    border: 1px solid rgba(200, 150, 43, 0.2);
+    position: relative;
+}
+
+.dean-speech::before {
+    content: '\201C';
+    position: absolute;
+    top: -0.5rem;
+    left: 2rem;
+    font-size: 6rem;
+    color: rgba(200, 150, 43, 0.25);
+    font-family: Georgia, serif;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.dean-salutation {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--title-color) !important;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.dean-body p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--body-color);
+    margin-bottom: 1.4rem;
+}
+
+.dean-signature {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(200, 150, 43, 0.3);
+    text-align: right;
+}
+
+.dean-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--title-color) !important;
+    margin-bottom: 0.3rem;
+}
+
+.dean-title,
+.dean-faculty {
+    font-size: 1rem;
+    color: #aaa !important;
+    margin-bottom: 0.2rem;
+}
+
 /* Footer */
 .footer {
     background-color: #0d1020;
