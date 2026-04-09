@@ -922,6 +922,60 @@ p, li, label, caption, span {
     margin-top: 0.5rem;
 }
 
+/* Programa de Actividades */
+.programa-wrapper {
+    max-width: 520px;
+    margin: 0 auto;
+    background-color: #3a3830;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.programa-day {
+    padding: 1.8rem 2rem 0.5rem;
+}
+
+.programa-day-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--title-color);
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.programa-event {
+    padding: 0.9rem 2rem 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.programa-event--last {
+    padding-bottom: 1.8rem;
+}
+
+.programa-time {
+    font-size: 0.95rem;
+    color: #ccc !important;
+    margin-bottom: 0.3rem;
+}
+
+.programa-event-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+}
+
+.programa-detail {
+    font-size: 0.9rem;
+    color: #bbb !important;
+    margin-bottom: 0.15rem;
+    line-height: 1.5;
+}
+
 /* Dean's Speech */
 .dean-speech {
     max-width: 900px;
