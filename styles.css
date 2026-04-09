@@ -1133,6 +1133,36 @@ p, li, label, caption, span {
     }
 }
 
+/* Cortos Seleccionados Grid */
+.cortos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.corto-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    aspect-ratio: 2 / 3;
+}
+
+.corto-card:hover {
+    border-color: #c8962b;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(200, 150, 43, 0.3);
+}
+
+.corto-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
@@ -1174,6 +1204,11 @@ p, li, label, caption, span {
     .awards-container,
     .jury-grid {
         grid-template-columns: 1fr;
+    }
+
+    .cortos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 1rem;
     }
 
     .schedule-item {
